@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/golden-land-organics/static/css/main.b677e499.css",
+    "main.js": "/golden-land-organics/static/js/main.6ca30c13.js",
+    "index.html": "/golden-land-organics/index.html",
+    "main.b677e499.css.map": "/golden-land-organics/static/css/main.b677e499.css.map",
+    "main.6ca30c13.js.map": "/golden-land-organics/static/js/main.6ca30c13.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b677e499.css",
+    "static/js/main.6ca30c13.js"
+  ]
+}
