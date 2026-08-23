@@ -1,0 +1,261 @@
+:root {
+  --color-primary: #2f5233;
+  --color-primary-dark: #1d3320;
+  --color-accent: #d4a017;
+  --color-bg: #fdfaf3;
+  --color-text: #24291f;
+  --color-error: #b3261e;
+  --color-error-bg: #fdecea;
+  --color-success-bg: #e6f4ea;
+  --color-success-text: #1e4620;
+  --radius: 8px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.5;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+a {
+  color: var(--color-primary-dark);
+}
+
+/* Header */
+.site-header {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.site-header-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.brand {
+  color: white;
+  font-weight: 700;
+  font-size: 1.25rem;
+  text-decoration: none;
+}
+
+.site-header nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  margin: 0;
+  padding: 0;
+}
+
+.site-header nav a {
+  color: white;
+  text-decoration: none;
+  opacity: 0.85;
+}
+
+.site-header nav a:hover,
+.site-header nav a.active {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+/* Banner */
+.banner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.85rem;
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+.banner h1 {
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  margin: 0.5rem 0 1rem;
+}
+
+.banner-text {
+  max-width: 60ch;
+}
+
+.btn,
+.btn-submit {
+  display: inline-block;
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn:hover,
+.btn-submit:hover {
+  background-color: var(--color-primary-dark);
+}
+
+.btn-secondary {
+  display: inline-block;
+  margin-top: 1.5rem;
+  color: var(--color-primary-dark);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* Sections */
+.page-section,
+.highlights {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 3rem;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.product-card {
+  background: white;
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.product-category {
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  color: var(--color-accent);
+  font-weight: 700;
+  margin: 0 0 0.25rem;
+}
+
+.product-card h3 {
+  margin: 0 0 0.5rem;
+}
+
+.product-price {
+  font-weight: 700;
+  margin-top: 0.75rem;
+}
+
+.product-price span {
+  font-weight: 400;
+  color: #666;
+}
+
+/* Order form */
+.order-form {
+  max-width: 640px;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.form-field label {
+  font-weight: 600;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  padding: 0.6rem 0.75rem;
+  border: 1px solid #b8b8b8;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.form-field input[aria-invalid="true"],
+.form-field select[aria-invalid="true"],
+.form-field textarea[aria-invalid="true"] {
+  border-color: var(--color-error);
+  outline-color: var(--color-error);
+}
+
+.field-error {
+  color: var(--color-error);
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+.form-alert {
+  padding: 1rem 1.25rem;
+  border-radius: var(--radius);
+  margin-top: 1rem;
+}
+
+.form-alert-error {
+  background-color: var(--color-error-bg);
+  color: var(--color-error);
+}
+
+.form-alert-success {
+  background-color: var(--color-success-bg);
+  color: var(--color-success-text);
+}
+
+/* Footer */
+.site-footer {
+  background-color: var(--color-primary-dark);
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.site-footer p {
+  margin: 0.25rem 0;
+}
+
+/* Responsive: stack the date/time row on narrow screens */
+@media (max-width: 600px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
